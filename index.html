@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>PicUpload</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="icon" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">
+        <div class="imgcontainer">
+          <img src="user.png" alt="Avatar" class="avatar">
+        </div>
+        <h6>Welcome to</h6>
+        <h3>PicUpload</h3>
+      </div>
+    </div>
+    <div class="googlelogin" onclick="">
+            <img src="logo.png"><h5>Continue with Google</h5>
+    </div>
+    <div class="or">
+         ---------------------- or ----------------------
+    </div>
+    <div class="form-container">
+      <div class="form-inner">
+        <form onsubmit="return validateLogin()" class="login" action="admin.html">
+          <div class="field">
+            <input type="text" id="username" placeholder="Enter Username" required>
+          </div>
+          <div class="field">
+            <input type="password" id="password" placeholder="Enter your password" required>
+          </div>
+          <div class="pass-link">
+            <a href="">Forgot password?</a>
+         </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link">Don't have an account? <a href="">Signup now</a></div>
+          
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function validateLogin() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Check if username and password match your criteria
+        if (username === 'Rishi03' && password === 'Driems@123') {
+          // If match, open the admin.html page
+          window.location.href = 'home.html';
+          return false; // Prevent form submission
+        } else {
+          // If not a match, you may display an error message or handle it as needed
+          alert('Invalid username or password');
+          return false; // Prevent form submission
+        }
+      }
+    </script>
+  </div>
+</body>
+
+</html>
